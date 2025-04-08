@@ -45,4 +45,6 @@ if ! command_exists curl; then
 fi
 _s "Curl command exists on this system"
 
+_w "Installing brew..."
 install_brew_osx
+_w
