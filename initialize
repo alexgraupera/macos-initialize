@@ -52,12 +52,11 @@ _w "$cleanup_cmd"
 $(which brew) bundle --file="Brewfile" --force cleanup
 _s "Brewfile bundle executed"
 _w
+
 _w "Installed brew packages:"
 $(which brew) list
 _w
-_w "Installed brew cask packages:"
-$(which brew) list --cask
-_w
+
 _w "Installed brew taps:"
 $(which brew) tap
 _w
