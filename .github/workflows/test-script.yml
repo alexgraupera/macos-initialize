@@ -1,0 +1,13 @@
+name: Script test on macOS
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v2
+
+      - name: Execute script
+        run: bash ./initialize

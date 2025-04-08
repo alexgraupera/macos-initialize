@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+
+source "$script_dir/functions"
+
+_w "  ┌─────────────────────────────────────────────────┐"
+_w "~ │ 🚀 Welcome to the ${green}macos initialization${normal} utility! │ ~"
+_w "  └─────────────────────────────────────────────────┘"
+_w
+
+# Git Install
+# In MacOS git is installed if Command Line Tools (CLT) are installed
+# and not if git command exists because it exists but ask you to
+# install CLT.
+
+_w "Checking if Git is installed"
+if [[ $OSTYPE =~ ^[darwin] ]] && ! ls /Library/Developer/CommandLineTools >/dev/null 2>&1; then
+	# In macOS if we do not have CLT then we do not have git. This could be wrong
+	# but we will want brew later and if we do not have CLT we can not have brew
+	#
+	# Brew manages the installation of brew so we will intall Brew
+	_w "Command Line Tools could not be detected"
+	install_brew_osx
+	_w
+fi
+
+if ! command_exists git; then
+	# Other OS checking if git exists...
+	if ! package_install git; then
+		_e "Could not continue without git"
+		exit 1
+	fi
+fi
+_s "Git command exists on this system"
+_w
+
+# Check if curl command exists and try to install it if not
+if ! command_exists curl; then
+	# Other OS checking if git exists...
+	if ! package_install curl; then
+		_e "Could not continue without git"
+		exit 1
+	fi
+fi
+_s "Curl command exists on this system"
