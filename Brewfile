@@ -117,14 +117,9 @@ cask "raycast"
 cask "shottr"
 cask "slack"
 cask "stats"
-cask "sublime-text"
-cask "sweet-home3d"
 cask "visual-studio-code"
-cask "visual-studio-code@insiders"
 cask "vlc"
 mas "Discovery", id: 1381004916
-mas "Flow", id: 1423210932
-mas "GarageBand", id: 682658836
 mas "Googly Eyes", id: 6743048714
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -132,7 +127,6 @@ mas "MQTT Explorer", id: 1455214828
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Webp Converter", id: 1527716894
-mas "Xcode", id: 497799835
 vscode "codely.codely-theme"
 vscode "dotjoshjohnson.xml"
 vscode "eamodio.gitlens"
@@ -142,13 +136,4 @@ vscode "github.vscode-github-actions"
 vscode "mechatroner.rainbow-csv"
 vscode "miguelsolorio.fluent-icons"
 vscode "miguelsolorio.symbols"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-python.debugpy"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode.vscode-speech"
-vscode "parallelsdesktop.parallels-desktop"
-vscode "quanli.focus"
-vscode "redhat.vscode-xml"
 vscode "xdebug.php-debug"
