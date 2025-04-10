@@ -47,9 +47,8 @@ _s "Curl command exists on this system"
 _w
 
 _w "Initializing brew bundle..."
-cleanup_cmd="$(which brew) bundle --file="Brewfile" --force cleanup"
-_w "$cleanup_cmd"
-$(which brew) bundle --file="Brewfile" --force cleanup
+#cleanup_cmd="$(which brew) bundle --file="Brewfile" --force cleanup"
+brew bundle --file="Brewfile" --force cleanup
 _s "Brewfile bundle executed"
 _w
 

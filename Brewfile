@@ -1,7 +1,5 @@
 tap "denisidoro/tools"
 tap "exolnet/deprecated"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
 tap "int128/kubelogin"
 tap "sdkman/tap"
 tap "shivammathur/php"
