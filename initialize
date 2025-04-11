@@ -48,7 +48,7 @@ _w
 
 _w "Initializing brew bundle..."
 #cleanup_cmd="$(which brew) bundle --file="Brewfile" --force cleanup"
-brew bundle --file="Brewfile" --force cleanup
+brew bundle
 _s "Brewfile bundle executed"
 _w
 
@@ -59,3 +59,6 @@ _w
 _w "Installed brew taps:"
 $(which brew) tap
 _w
+
+brew bundle --force-cleanup
+_s "Brewfile bundle cleanup executed"
